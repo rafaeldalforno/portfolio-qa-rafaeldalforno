@@ -15,6 +15,7 @@ html {
     --black: #050505;
     --white: #fafafa;
     --gray: #c9c9c9;
+    --vidro: rgba(255, 255, 255, 0.1)
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   color: var(--white);
 }
 
+/*########### HEADER ##################*/
 .navegacao {
   position: fixed;
   top: 0;
@@ -61,3 +63,61 @@ body {
 .menu-link:hover::after {
   width: 100%;
 }
+
+/*########### INÍCIO ##################*/
+.cabecalho {
+  min-height: 100vh;
+  /* margin-top: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabecalho .perfil{
+  text-align: center;
+  color: var(--white);
+}
+
+.cabecalho .foto-perfil {
+  width: 280px;
+  height: 300px;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  border-radius: 50%;
+  border: 4px solid var(--vidro);
+  margin: 70px 20px 20px 20px;
+}
+
+.perfil h1 {
+  font-size: 2.5rem;
+  color: var(--white);
+  font-weight: bold;
+  margin: 30px;
+}
+
+.perfil p{
+  font-size: 2rem;
+  color: var(--blue);
+  margin-bottom: 50px;
+}
+
+.perfil .redes-sociais{
+  margin: 30px;
+}
+
+.redes-sociais a{
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--blue);
+  padding: 7px 15px;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 2rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.perfil .cv-contato {
+  margin: 100px 0;
+}
+
+/*########### SOBRE ##################*/
