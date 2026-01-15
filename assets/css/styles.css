@@ -121,3 +121,91 @@ body {
 }
 
 /*########### SOBRE ##################*/
+.sobre {
+  padding: 8rem 2rem;
+}
+
+.sobre-titulo {
+  font-size: 3rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.sobre-background {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid var(--vidro);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sobre-paragrafo {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/*########### DIPLOMAS E CERTIFICAÇÕES ###############*/
+.diplomas {
+  padding: 8rem 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.diplomas .titulo {
+  font-size: 3rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.diplomas .sub-titulo {
+  font-size: 2rem;
+  color: var(--blue);
+  margin: 3rem 0;
+}
+
+.projetos-caixa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.card-diploma {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--vidro);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.card-diploma:hover {
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.5);
+  transform: translate(-10px) scale(1.03);
+  transition: all 0.5s ease;
+}
+
+.projetos-caixa .card-diploma a {
+  text-decoration: none;
+}
+
+.titulo-diploma{
+  color: var(--gray);
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.projetos-imagem {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
