@@ -85,6 +85,7 @@ body {
   border-radius: 50%;
   border: 4px solid var(--vidro);
   margin: 70px 20px 20px 20px;
+  animation: flutuar 5s ease-in-out infinite;
 }
 
 .perfil h1 {
@@ -147,21 +148,24 @@ body {
   font-size: 1.3rem;
 }
 
-/*########### DIPLOMAS E CERTIFICAÇÕES ###############*/
-.diplomas {
+/*########### DIPLOMAS E PROJETOS ###############*/
+.diplomas ,
+.projetos {
   padding: 8rem 2rem;
   max-width: 1024px;
   margin: 0 auto;
 }
 
-.diplomas .titulo {
+.diplomas .titulo ,
+.projetos .titulo {
   font-size: 3rem;
   color: var(--white);
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.diplomas .sub-titulo {
+.diplomas .sub-titulo ,
+.projetos .sub-titulo {
   font-size: 2rem;
   color: var(--blue);
   margin: 3rem 0;
@@ -176,7 +180,8 @@ body {
   cursor: pointer;
 }
 
-.card-diploma {
+.card-diploma, 
+.card-projetos{
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--vidro);
   border-radius: 16px;
@@ -185,20 +190,23 @@ body {
   padding-bottom: 20px;
 }
 
-.card-diploma:hover {
+.card-diploma:hover ,
+.card-projetos:hover {
   box-shadow: 0 10px 20px rgba(0, 123, 255, 0.5);
   transform: translate(-10px) scale(1.03);
   transition: all 0.5s ease;
 }
 
-.projetos-caixa .card-diploma a {
+.projetos-caixa .card-diploma a ,
+.projetos-caixa .card-projetos a {
   text-decoration: none;
 }
 
-.titulo-diploma{
+.titulo-diploma,
+.titulo-projetos {
   color: var(--gray);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 10px 0;
 }
 
@@ -206,6 +214,84 @@ body {
   height: 200px;
   width: 100%;
   object-fit: cover;
-  transform: scale(1.05);
+  transform: translateY(-4px);
   transition: all 0.3s ease;
+}
+
+.projetos .paragrafo-projetos {
+  color: var(--gray);
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/*########### CONTATOS ###############*/
+.contatos {
+  padding: 8rem 2rem;
+  margin: 0 auto;
+}
+
+.contatos-titulo {
+  font-size: 3rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.formulario-contato {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--vidro);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+}
+
+.campo-form {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--vidro);
+  border-radius: 8px;
+  color: var(--white);
+  outline: none;
+}
+
+.campo-form:focus {
+  border-color: var(--blue-claro); 
+  box-shadow: 0 0 10px rgba(56, 51, 154, 0.3);
+}
+
+.grupo-form {
+  margin-bottom: 1.5rem;
+}
+
+.botao-form {
+  color: var(--white);
+  background: linear-gradient(45deg, var(--blue), var(--blue-claro));
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.botao-form:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(45deg, var(--blue-claro), var(--blue));
+  box-shadow: 0 5px 15px rgba(56, 51, 154, 0.3);
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }

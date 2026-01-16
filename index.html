@@ -103,30 +103,41 @@
   <section id="projetos" class="projetos">
     <h2 class="titulo">Meus Projetos</h2>
 
-    <h3 class="sub-titulo">Projetos QA (Analista de QA)</h3>
-    <div class="card-projetos">
-      <img src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto X">
-      <h4 class="titulo-projetos">Projeto X</h4>
-      <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
+    <h3 class="sub-titulo">Projetos QA (Analista de QA):</h3>
+    <div class="projetos-caixa">
+      <div class="card-projetos">
+        <a href="#PROJETO_X" target="_blank">
+          <img class="projetos-imagem" src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto X">
+          <h4 class="titulo-projetos">Projeto X</h4>
+          <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
+        </a>
+      </div>
+
+      <div class="card-projetos">
+        <a href="#PROJETO_Y" target="_blank">
+          <img class="projetos-imagem" src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto Y">
+          <h4 class="titulo-projetos">Projeto Y</h4>
+          <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
+        </a>
+      </div>
     </div>
 
-    <div class="card-projetos">
-      <img src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto Y">
-      <h4 class="titulo-projetos">Projeto Y</h4>
-      <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
-    </div>
-    
-    <h3 class="sub-titulo">Projetos Dev</h3>
-    <div class="card-projetos">
-      <img src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto Z">
-      <h4 class="titulo-projetos">Projeto Z</h4>
-      <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
-    </div>
+    <h3 class="sub-titulo">Projetos Dev Full Stack:</h3>
+    <div class="projetos-caixa">
+      <div class="card-projetos">
+        <a href="#PROJETO_Z" target="_blank">
+          <img class="projetos-imagem" src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto Z">
+          <h4 class="titulo-projetos">Projeto Z</h4>
+          <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
+        </a>
+      </div>
 
     <div class="card-projetos">
-      <img src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto T">
-      <h4 class="titulo-projetos">Projeto T</h4>
-      <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
+      <a href="#PROJETO_T" target="_blank">
+        <img class="projetos-imagem" src="./assets/image/diploma-eletronica-ifsc.jpg" alt="Projeto T">
+        <h4 class="titulo-projetos">Projeto T</h4>
+        <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, temporibus ducimus debitis exercitationem iusto autem eligendi explicabo, sit, praesentium veniam nihil perferendis. Vero voluptas excepturi omnis quo est asperiores sed?.</p>
+      </a>
     </div>
     
   </section>
@@ -138,17 +149,22 @@
   <!-- RESULTADOS -->
 
   <!-- CONTATO -->
-  <section id="contato">
-    <h2 class="titulo">Contatos</h2>
-    <form id="formulario" class="formulario-contato">
-      <div class="nome-form">
-        <input class="campo-form" placeholder="Nome">
+  <section id="contato" class="contatos">
+    <h2 class="contatos-titulo">Entre em Contato</h2>
+    <form id="formulario" class="formulario-contato" onsubmit="enviarWhats(event)">
+      <div class="grupo-form">
+        <input id="nome" class="campo-form" placeholder="Nome">
       </div>
       <div class="grupo-form">
-        <textarea class="text-form" placeholder="Digite sua Mensagem"></textarea>
+        <textarea id="mensagem" class="campo-form" rows="6" placeholder="Digite sua Mensagem"></textarea>
       </div>
+
+      <button type="submit" class="botao-form">Enviar WhatsApp</button>
     </form>
 
   </section>
+
+
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
