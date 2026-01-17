@@ -67,7 +67,6 @@ body {
 /*########### INÍCIO ##################*/
 .cabecalho {
   min-height: 100vh;
-  /* margin-top: 100px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,24 +100,19 @@ body {
   margin-bottom: 50px;
 }
 
-.perfil .redes-sociais{
-  margin: 30px;
+.scroll-down {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.4s ease-out;
+    opacity: 0;
+    user-select: none;
 }
 
-.redes-sociais a{
-  text-decoration: none;
-  text-transform: uppercase;
-  background: var(--blue);
-  padding: 7px 15px;
-  border-radius: 10px;
-  color: var(--white);
-  font-size: 2rem;
-  margin: 0 15px;
-  transition: color 0.3s ease;
-}
-
-.perfil .cv-contato {
-  margin: 100px 0;
+.scroll-down img {
+    width: 32px;
 }
 
 /*########### SOBRE ##################*/
@@ -131,6 +125,12 @@ body {
   color: var(--white);
   text-align: center;
   margin-bottom: 6rem;
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sobre-background {
@@ -146,6 +146,22 @@ body {
 .sobre-paragrafo {
   text-align: center;
   font-size: 1.3rem;
+}
+
+.redes-sociais{
+  margin: 50px;
+}
+
+.redes-sociais a{
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--blue);
+  padding: 7px 15px;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 2rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
 }
 
 /*########### DIPLOMAS E PROJETOS ###############*/
@@ -286,6 +302,13 @@ body {
   box-shadow: 0 5px 15px rgba(56, 51, 154, 0.3);
 }
 
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.7);
+  margin-top: 4rem;
+}
+
 @keyframes flutuar {
   0%, 100% {
     transform: translateY(0);
@@ -293,5 +316,15 @@ body {
 
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-15px);
   }
 }
